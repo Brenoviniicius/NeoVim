@@ -1,0 +1,27 @@
+# Diretórios de cache e dados temporários
+*.log
+*.tmp
+*.backup
+*.swp
+*.swo
+*.un~
+*.json
+
+tags
+
+# Lazy.nvim, packer.nvim ou qualquer outro gerenciador de plugins que baixe plugins
+/lazy-lock.json
+/plugin/packer_compiled.lua
+/site/
+
+# Diretórios de backup/swap do Neovim
+swap//
+backup//
+undo//
+
+# Session files (se você usa plugins para isso)
+session/
+
+# Arquivos temporários criados por plugins
+*.DS_Store
+
