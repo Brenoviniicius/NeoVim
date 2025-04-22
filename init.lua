@@ -49,6 +49,8 @@ local opts = {}
 require("lazy").setup(plugins, opts)
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+
 
 local configs = require("nvim-treesitter.configs")
 configs.setup({
