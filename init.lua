@@ -39,3 +39,11 @@ local opts = {}
 require("lazy").setup(plugins, opts)
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+          ensure_installed = { "lua", "elixir", "javascript", "html", "terraform", "php" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },  
+        })
