@@ -40,10 +40,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-    },
-    lazy = false,
-    opts = {
-    },
+    }
   }
 }
 
@@ -59,4 +56,4 @@ configs.setup({
           sync_install = false,
           highlight = { enable = true },
           indent = { enable = true },  
-        })
+})
