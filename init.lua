@@ -16,9 +16,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require("plugins")
+--local plugins = require("plugins")
 local opts = {}
-require("lazy").setup(plugins, opt)
+require("lazy").setup("plugins")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
