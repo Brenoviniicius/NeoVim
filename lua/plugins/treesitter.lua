@@ -1,9 +1,9 @@
 return {
-  {
+  
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
+    build = ":TSUpdate",
+    config = function()
     local configs = require("nvim-treesitter.configs")
-    config = function():
     configs.setup({
     ensure_installed = { "lua", "elixir", "javascript", "html", "terraform", "php" },
     sync_install = false,
@@ -11,4 +11,6 @@ return {
     indent = { enable = true },  
 })
   end,
+  
   }
+
