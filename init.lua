@@ -22,10 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 require("lazy").setup("plugins")
 
-local configs = require("nvim-treesitter.configs")
-configs.setup({
-          ensure_installed = { "lua", "elixir", "javascript", "html", "terraform", "php" },
-          sync_install = false,
-          highlight = { enable = true },
-          indent = { enable = true },  
-})
+
