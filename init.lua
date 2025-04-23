@@ -2,7 +2,8 @@ vim.cmd("set expandtab") -- Faz com que o tab adicione espaços ao invés de um 
 vim.cmd("set tabstop=2") -- Tab irá contar como dois espaços
 vim.cmd("set softtabstop=2") -- Usa dois espaços ao pressionar Tab no modo de inserção
 vim.cmd("set shiftwidth=2") -- Usará dois espaços para identação
-
+vim.o.autoident = true
+vim.o.smartident = true
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -19,10 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 --local plugins = require("plugins")
 local opts = {}
 require("lazy").setup("plugins")
-
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
 
 local configs = require("nvim-treesitter.configs")
 configs.setup({
